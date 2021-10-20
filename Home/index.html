@@ -8,30 +8,31 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/home.css">
     <title>Pokemon!</title>
 </head>
 
 <body>
+    <div id="radio-buttons">
+        <label for="first-pokemon">
+            <input type="radio" name="pokemon" id="first-pokemon">
+            <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="">
+        </label>
 
-   <label for="first-pokemon">
-       <input type="radio" name="pokemon" id="first-pokemon">
-       <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="">
-   </label>
+        <label for="second-pokemon">
+            <input type="radio" name="pokemon" id="second-pokemon">
+            <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png" alt="">
+        </label>
 
-   <label for="second-pokemon">
-       <input type="radio" name="pokemon" id="second-pokemon">
-       <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png" alt="">
-   </label>
-
-   <label for="third-pokemon">
-       <input type="radio" name="pokemon" id="third-pokemon">
-       <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" alt="">
-   </label>
-
-   <button id="select-pokemon">I choose you!</button>
+        <label for="third-pokemon">
+            <input type="radio" name="pokemon" id="third-pokemon">
+            <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" alt="">
+        </label>
+    </div>
+    
+    <button id="select-pokemon">I choose you!</button>
 
     <script type="module" src="./app.js"></script>
 
