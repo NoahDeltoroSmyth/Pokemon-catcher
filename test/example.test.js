@@ -23,7 +23,7 @@ test('getResults() function should pull info into localStorage', (expect) => {
         { id: '1', picked: 3 },
         { id: '2', picked: 4 }
     ];
-    localStorage.setItem('RESULTS', JSON.stringify(mockResults));
+    localStorage.setItem('POKEMON', JSON.stringify(mockResults));
 
     const results = getResults();
 
