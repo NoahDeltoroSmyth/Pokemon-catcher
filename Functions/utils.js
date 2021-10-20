@@ -3,3 +3,7 @@ export function getResults(){
     const results = JSON.parse(resultsString);
     return results;
 }
+
+export function pickPokemon(){
+    
+}
