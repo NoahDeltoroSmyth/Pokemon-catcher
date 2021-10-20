@@ -19,30 +19,34 @@ test('time to test a function', (expect) => {
 });
 
 test('getResults() function should pull info into localStorage', (expect) => {
-    const mockResults = [
+    const expected = [
         { id: '1', shown: 3, picked: 3 },
         { id: '2', shown: 4, picked: 4 }
     ];
-    localStorage.setItem('POKEMON', JSON.stringify(mockResults));
+    localStorage.setItem('POKEMON', JSON.stringify(expected));
 
-    const results = getResults();
+    const actual = getResults();
 
-    expect.deepEqual(results, mockResults);
+    expect.deepEqual(actual, expected);
 });
 
 test('pickPokemon() function should add item into localStorage', (expect) => {
+    localStorage.removeItem('POKEMON');
+    
     const mockResults = [
         { id: '1', shown: 3, picked: 2 },
     ];
 
     localStorage.setItem('POKEMON', JSON.stringify(mockResults));
 
-    const mockResults2 = [
+    const expected = [
         { id: '1', shown: 3, picked: 3 },
     ];
 
+    pickPokemon('1');
+
     const actual = getResults();
 
-    expect.deepEqual(actual, mockResults2);
+    expect.deepEqual(actual, expected);
 
 });
