@@ -31,7 +31,7 @@ USER EVENTS
 DATA
 	* Total plays ~ #
 	* There will be two arrays :
-	---> A list of Pokemon :
+	---> A list of Pokemon (pokemon.js):
 
 		Pokemon [{id:___,
 				img:___}]
@@ -43,7 +43,7 @@ DATA
 		  		preferred: 1}];
 
 FUNCTIONS 
-All placed in a separate JS file (Pokemon.js) :
+All placed in a separate JS file (utils.js) :
 	* findById
 	* getResults
 		-get data from local storage
