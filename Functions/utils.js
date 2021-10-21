@@ -23,3 +23,16 @@ export function capturePokemon(id) {
     setResults(newResults);
 }
 
+export function encounterPokemon(id) {
+    const newResults = getPokedex();
+    const encounterPokemon = newResults.find(pokemon => pokemon.id === id);
+    
+    if (encounterPokemon){
+        encounterPokemon.shown ++;  
+    } else {
+        const newencounterPokemon = { id: id, shown: 1, picked: 1 };
+        newResults.push(newencounterPokemon);
+    }
+
+    setResults(newResults);
+}
