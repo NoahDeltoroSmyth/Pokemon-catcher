@@ -87,19 +87,19 @@ APP.JS LOGIC :
 			+ regenerate the number if any index match using a while loop with or statements
 		- renderpokemon
 			+ create a variable that sets pokemon to a randomindex
-			+ call showPokemon to new new variable.id
-			+ assign image to = new varibale.image
-			+ assign radio button to = new variable.id
+			+ invoke encounterPokemon to new new variable.id
+			+ assign image var.src to = new varibale.image
+			+ assign radio.value button to = new variable.id
 
 ON PAGE LOAD (GLOBAL):
 	* set totalPlays to 0
-	* call generatePokemon()
+	* invoke generatePokemon()
 
 ON BUTTON CLICK :
 	* create new variable to = checked radio button
 	* create if statement for new variable by assigning checked radio button to a chosen variable then -->
 	* Increment totalPlays
-	* invoke pickPokemon with chosen Pokemon meaning (pickPokemon(chosenvariable))
+	* invoke capturePokemon with chosen Pokemon meaning (pickPokemon(chosenvariable))
 	* next if statement is (totalPlays >= 10){bring to results page}
 	* else
 		- invoke generatePokemon
