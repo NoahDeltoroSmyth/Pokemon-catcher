@@ -1,25 +1,102 @@
-# Alchemy Bootstrap Template
+## Pokemon App
 
-## Making a plan
+THERE WILL BE TWO PAGES : 
+	1) A home page with displayed Pokemon and a pick button
 
-(bolded steps are mandatory, unbolded are for more advanced projects)
+	and 
 
-1) **Make a drawing of your app. Simple "wireframes"**
-2) **Once you have a drawing, name the HTML elements you'll need to realize your vision**
-3) **For each HTML element ask: Why do I need this?**
-4) Ask which of out HTML elements are hard coded, and which are dynamically generated?
-5) **Once we know _why_ we need each element, think about how to implement the "Why" as a "How"**
-6) Is there some state we need to initialize?
-7) **Find all the 'events' (user clicks, form submit, on load etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change?**
-8) **Think about how to validate each of your steps**
-9) Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
-10) Consider your data model. What objects will you be using? What are the key/value pairs? What arrays do you need? What needs to live in local storage?
-11) **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
+	2) A results page that tells the user how many times a Pokemon was shown and how many times a Pokemon was picked.
 
+	Day 2 will be to make a graph that represents this data.
 
-## To Run Cypress Tests
-* `npm install`
-* `npm test`
-* Cypress will open -- you should then click "run <#> integration spec(s)"
-    ![](cypress.png)
-* Make sure all tests pass
+HTML ELEMENTS : 
+	Radio buttons
+		* => event listener
+	State
+		* Total plays
+		* What Pokemon has been picked
+		* What Pokemon has been shown
+
+USER EVENTS
+	Page Load
+		* Generate 3 random Pokemon
+		* Update shown state
+		* Render Pokemon on the page
+
+	Button click
+		* Update picked state
+		* Update/increment total plays state
+		* Generate new Pokemon selection & render
+
+DATA
+	* Total plays ~ #
+	* There will be two arrays :
+	---> A list of Pokemon (pokemon.js):
+
+		Pokemon [{id:___,
+				img:___}]
+
+	---> A results array :
+		
+		results [{id: “apple”,
+		  		shown: 2,
+		  		preferred: 1}];
+
+FUNCTIONS 
+All placed in a separate JS file (utils.js) :
+	* findById
+	* getResults
+		-get data from local storage
+	* encounterPokemon (id)
+		-increments shown
+	* capturePokemon (id)
+		-increments picked
+
+## Plan of Attack
+
+FILE STRUCTURE :
+	* Home page
+		- index.html
+		- app.js
+	* Results page
+		-index.html
+		- results.js
+	* Storage-utils.js
+		- holds localStorage Functions
+	* Pokemon.js
+		- holds Pokemon objects array
+
+HTML ELEMENTs :
+	*Make a home page with
+		-3 images with radio buttons
+		-button with an id
+	* make an empty results page
+	* Link the two
+
+LOCAL STORAGE FUNCTIONS :
+	* getResults - returns the results array or empty array
+	* showPokemon - increment the shown key for a Pokemon
+	* pickPokemon - increment the picked key for a Pokemon
+
+APP.JS LOGIC :
+	* Import Pokemon.js
+	* Get image DOM elements
+	* Make function called generatePokemon() which does the following :
+		- generates 3 random Pokemon
+			+ generate 3 random array index from Pokemon array using math.random
+			+ regenerate the number if any index match using a while loop with or statements
+		- call showPokemon for each
+		- render the Pokemon on page
+			+ grab random index and make image DOM variable equal to pokemon.image from array
+
+ON PAGE LOAD :
+	* set totalPlays to 0
+	* call generatePokemon()
+
+ON BUTTON CLICK :
+	* Increment totalPlays
+	* call pickPokemon with chosen Pokemon
+	* if totalPlays >= 10
+		- redirect to results
+	* else
+		- call generatePokemon
