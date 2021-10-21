@@ -36,7 +36,7 @@ export function encounterPokemon(id) {
     if (encounterPokemon){
         encounterPokemon.shown ++;  
     } else {
-        const newEncounterPokemon = { id: id, shown: 1, picked: 1 };
+        const newEncounterPokemon = { id: id, shown: 1, picked: 0 };
         newResults.push(newEncounterPokemon);
     }
 
