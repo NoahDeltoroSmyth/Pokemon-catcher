@@ -3,21 +3,21 @@ export function setResults(pokemon) {
     localStorage.setItem('POKEMON', stringyResults);
 }
 
-export function getResults() {
+export function getPokedex() {
     const resultsString = localStorage.getItem('POKEMON') || '[]';
     const results = JSON.parse(resultsString);
     return results;
 }
 
-export function pickPokemon(id) {
-    const newResults = getResults();
-    const pickedPokemon = newResults.find(pokemon => pokemon.id === id);
+export function capturePokemon(id) {
+    const newResults = getPokedex();
+    const capturePokemon = newResults.find(pokemon => pokemon.id === id);
     
-    if (pickedPokemon){
-        pickedPokemon.picked ++;  
+    if (capturePokemon){
+        capturePokemon.picked ++;  
     } else {
-        const newPickedPokemon = { id: id, shown: 1, picked: 1 };
-        newResults.push(newPickedPokemon);
+        const newCapturePokemon = { id: id, shown: 1, picked: 1 };
+        newResults.push(newCapturePokemon);
     }
 
     setResults(newResults);
