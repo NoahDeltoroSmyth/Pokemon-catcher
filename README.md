@@ -79,24 +79,27 @@ LOCAL STORAGE FUNCTIONS :
 	* pickPokemon - increment the picked key for a Pokemon
 
 APP.JS LOGIC :
-	* Import Pokemon.js
+	* Import Pokemon.js, encounterPokemon and capturePokemon
 	* Get image DOM elements
 	* Make function called generatePokemon() which does the following :
 		- generates 3 random Pokemon
 			+ generate 3 random array index from Pokemon array using math.random
 			+ regenerate the number if any index match using a while loop with or statements
-		- call showPokemon for each
-		- render the Pokemon on page
-			+ grab random index and make image DOM variable equal to pokemon.image from array
+		- renderpokemon
+			+ create a variable that sets pokemon to a randomindex
+			+ call showPokemon to new new variable.id
+			+ assign image to = new varibale.image
+			+ assign radio button to = new variable.id
 
-ON PAGE LOAD :
+ON PAGE LOAD (GLOBAL):
 	* set totalPlays to 0
 	* call generatePokemon()
 
 ON BUTTON CLICK :
+	* create new variable to = checked radio button
+	* create if statement for new variable by assigning checked radio button to a chosen variable then -->
 	* Increment totalPlays
-	* call pickPokemon with chosen Pokemon
-	* if totalPlays >= 10
-		- redirect to results
+	* invoke pickPokemon with chosen Pokemon meaning (pickPokemon(chosenvariable))
+	* next if statement is (totalPlays >= 10){bring to results page}
 	* else
-		- call generatePokemon
+		- invoke generatePokemon

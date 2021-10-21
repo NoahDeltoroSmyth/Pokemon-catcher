@@ -19,9 +19,10 @@ const generatePokemon = () => {
         randomPokedex2 = Math.floor(Math.random() * pokemon.length);
         randomPokedex3 = Math.floor(Math.random() * pokemon.length);
     }
-    
+    //render pokemon on page
     let pokemon1 = pokemon[randomPokedex1];
     pokemonImg1.src = pokemon1.url_image;
+
 
     let pokemon2 = pokemon[randomPokedex2];
     pokemonImg2.src = pokemon2.url_image;
