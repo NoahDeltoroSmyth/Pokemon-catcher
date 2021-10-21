@@ -13,7 +13,13 @@ export function pickPokemon(id) {
     const newResults = getResults();
     const pickedPokemon = newResults.find(pokemon => pokemon.id === id);
     
-    pickedPokemon.picked ++;  
+    if (pickedPokemon){
+        pickedPokemon.picked ++;  
+    } else {
+        const newPickedPokemon = { id: id, shown: 1, picked: 1 };
+        newResults.push(newPickedPokemon);
+    }
 
     setResults(newResults);
 }
+
