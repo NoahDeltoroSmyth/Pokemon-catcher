@@ -9,6 +9,12 @@ export function getPokedex() {
     return results;
 }
 
+export function setPokedex() {
+    const resultsString = localStorage.getItem('POKEMON') || '[]';
+    const results = JSON.parse(resultsString);
+    return results;
+}
+
 export function capturePokemon(id) {
     const newResults = getPokedex();
     const capturePokemon = newResults.find(pokemon => pokemon.id === id);
