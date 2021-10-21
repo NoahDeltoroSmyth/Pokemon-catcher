@@ -1,12 +1,12 @@
 
-describe('Example Test', ()=>{
-    before(()=>{
-        cy.visit('/');
-    });
+// describe('Example Test', ()=>{
+//     before(()=>{
+//         cy.visit('/');
+//     });
 
-    describe('HTML elements', ()=>{   
-        it('contains a body element', ()=>{
-            cy.get('body').should('be.visible');
-        });
-    });
-});
+//     describe('HTML elements', ()=>{   
+//         it('contains a body element', ()=>{
+//             cy.get('body').should('be.visible');
+//         });
+//     });
+// });
