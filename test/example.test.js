@@ -33,10 +33,7 @@ test('getPokedex() function should pull info from localStorage', (expect) => {
 test('setPokedex() function should set info into localStorage', (expect) => {
     localStorage.removeItem('POKEMON');
 
-    const expected = [
-        { id: '1', shown: 3, picked: 3 },
-        { id: '2', shown: 4, picked: 4 }
-    ];
+    const expected = [];
 
     localStorage.setItem('POKEMON', JSON.stringify(expected));
 
