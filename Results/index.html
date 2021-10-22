@@ -11,11 +11,18 @@
     <link rel="stylesheet" href="../styles/resultstyle.css">
 
     <title>Pokemon Results</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
 </head>
 <body>
     <h1>These are your catch results</h1>
-    <main class="main-display" id="results-display">
+    <main>
+
+       <section class="main-display" id="results-display"></section>
        
+       <section>
+        <canvas id="myChart" width="400" height="400"></canvas>
+       </section>
+
     </main>
     
     <a href="../Home/index.html">Go catch some more Pokemon</a>
