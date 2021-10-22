@@ -1,0 +1,25 @@
+.main-display {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 200px;
+}
+
+div {
+    padding: 25px;
+    margin: 25px;
+    border: gold 2px solid;
+    border-radius: 20px;
+}
+
+span {
+    padding: 10px;
+}
+
+h2 {
+    padding-left: 60px;
+}
+
