@@ -5,17 +5,8 @@ div {
     box-sizing: border-box;
 }
 
-input[type="radio"] {
-    display: none;
-}
-
-input[type=radio]:checked + img {
-    border: 2px solid gold;
-    border-radius: 80px;
-}
-
 img {
-    width: 200px;
+    width: 400px;
     padding: 50px;
     margin: 25px;
 }
@@ -25,10 +16,4 @@ img {
     flex-direction: column;
     justify-content: center;
     margin-right: 0px;
-}
-
-#select-pokemon {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
