@@ -35,9 +35,11 @@ test('setPokedex() function should set info into localStorage', (expect) => {
 
     const expected = [];
 
-    localStorage.setItem('POKEMON', JSON.stringify(expected));
+    setPokedex(expected);
 
-    const actual = setPokedex();
+    const stringyResults = localStorage.getItem('POKEMON');
+
+    const actual = JSON.parse(stringyResults);
 
     expect.deepEqual(actual, expected);
 });
