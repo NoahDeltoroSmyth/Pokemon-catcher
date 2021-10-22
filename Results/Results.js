@@ -38,6 +38,7 @@ const picked = results.map(item => item.picked);
 const shown = results.map(item => item.shown);
 
 var ctx = document.getElementById('myChart').getContext('2d');
+// eslint-disable-next-line no-undef
 new Chart(ctx, {
     data: {
         labels: names,
