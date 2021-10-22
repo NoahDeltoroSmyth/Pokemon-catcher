@@ -5,28 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Stylesheets -->
+    <link rel="stylesheet" href="../styles/resultstyle.css">
     <link rel="stylesheet" href="../styles/home.css">
     <link rel="stylesheet" href="../styles/reset.css">
-    <!-- <link rel="stylesheet" href="../styles/style.css"> -->
-    <link rel="stylesheet" href="../styles/resultstyle.css">
-
+    <link rel="stylesheet" href="../styles/style.css">
+    
     <title>Pokemon Results</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
 </head>
 <body>
-    <h1>These are your catch results</h1>
-    <main>
-
-       <section class="main-display" id="results-display"></section>
-       
-       <section>
-        <canvas id="myChart" width="400" height="400"></canvas>
-       </section>
-
-    </main>
     
-    <a href="../Home/index.html">Go catch some more Pokemon</a>
+    <header class="header">
+        <h1>These are your catch results</h1>
+    </header>
 
+    <main>
+       <section class="main-display" id="results-display"></section>
+    </main>
+    <section class="chart">
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </section>
+
+    <div id="anchor">
+    <a href="../Home/index.html">Go catch some more Pokemon</a>
+    </div>
+    
     <script type="module" src="./Results.js"></script>
 </body>
 </html>
