@@ -1,21 +1,16 @@
-.header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+h1 {
+    margin-left: 500px;
 }
 main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    width: 1100px;
 }
 
 .chart {
-     width: 400px;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
+     width: 500px;
+     margin: auto;
 }
 
 img {
@@ -23,14 +18,8 @@ img {
 }
 
 div {
-    display: flex;
-    flex-direction: column;
     padding: 25px;
     margin: 25px;
     border: gold 2px solid;
     border-radius: 20px;
-}
-
-h2 {
-    
 }
