@@ -25,12 +25,8 @@ const generatePokemon = () => {
     }
     //render pokemon on page
     let pokemon1 = pokemon[randomPokedex1];
-    console.log(pokemon1, 'pokemon1');
-
     encounterPokemon(pokemon1.id);
     pokemonRadio1.value = pokemon1.id;
-    console.log(pokemonRadio1);
-
     pokemonImg1.src = pokemon1.url_image;
 
     let pokemon2 = pokemon[randomPokedex2];
@@ -49,10 +45,8 @@ generatePokemon();
 
 button.addEventListener('click', ()=> {
     const selectedRadio = document.querySelector('input[type=radio]:checked');
-    console.log(selectedRadio);
     if (selectedRadio) {
         const selectedPokemon = Number(selectedRadio.value);
-        console.log(selectedPokemon);
         totalPlays++;
         capturePokemon(selectedPokemon);
         if (totalPlays >= 10) {

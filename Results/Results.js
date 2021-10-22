@@ -6,10 +6,8 @@ const results = getPokedex();
 const resultsDisplay = document.getElementById('results-display');
 
 for (let item of results) {
-    console.log(item, 'item');
     
     const pokemonId = findById(item.id, pokemon);
-    console.log(pokemonId, 'pokemonId');
 
     const div = document.createElement('div');
 
