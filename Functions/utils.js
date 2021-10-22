@@ -1,7 +1,15 @@
-export function setResults(pokemon) {
-    const stringyResults = JSON.stringify(pokemon);
-    localStorage.setItem('POKEMON', stringyResults);
+export function findById(id, items){
+    for (let item of items){
+        if (item.id === id){
+            return item;
+        }
+    }
 }
+
+// export function setResults(pokemon) {
+//     const stringyResults = JSON.stringify(pokemon);
+//     localStorage.setItem('POKEMON', stringyResults);
+//}
 
 export function getPokedex() {
     const resultsString = localStorage.getItem('POKEMON') || '[]';
@@ -9,15 +17,14 @@ export function getPokedex() {
     return results;
 }
 
-export function setPokedex() {
-    const resultsString = localStorage.getItem('POKEMON') || '[]';
-    const results = JSON.parse(resultsString);
-    return results;
+export function setPokedex(pokemon) {
+    const resultsString = JSON.stringify(pokemon);
+    localStorage.setItem('POKEMON', resultsString);
 }
 
 export function capturePokemon(id) {
     const newResults = getPokedex();
-    const capturePokemon = newResults.find(pokemon => pokemon.id === id);
+    const capturePokemon = findById(id, newResults);
     
     if (capturePokemon){
         capturePokemon.picked ++;  
@@ -26,12 +33,12 @@ export function capturePokemon(id) {
         newResults.push(newCapturePokemon);
     }
 
-    setResults(newResults);
+    setPokedex(newResults);
 }
 
 export function encounterPokemon(id) {
     const newResults = getPokedex();
-    const encounterPokemon = newResults.find(pokemon => pokemon.id === id);
+    const encounterPokemon = findById(id, newResults);
     
     if (encounterPokemon){
         encounterPokemon.shown ++;  
@@ -40,5 +47,5 @@ export function encounterPokemon(id) {
         newResults.push(newEncounterPokemon);
     }
 
-    setResults(newResults);
+    setPokedex(newResults);
 }
