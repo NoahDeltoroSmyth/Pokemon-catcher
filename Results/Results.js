@@ -28,6 +28,14 @@ for (let item of results) {
 
 }
 
+const reset = document.getElementById('button');
+
+reset.addEventListener('click', ()=> {
+    localStorage.clear();
+    window.location.reload();
+    window.location = '../Home';
+});
+
 const names = results.map((item) => {
     const pokemonId = findById(item.id, pokemon);
     return pokemonId.pokemon;

@@ -1,7 +1,16 @@
-.main-display {
+h1 {
+    margin-left: 500px;
+}
+main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+}
+
+.chart {
+     width: 500px;
+     margin: auto;
 }
 
 img {
@@ -14,12 +23,3 @@ div {
     border: gold 2px solid;
     border-radius: 20px;
 }
-
-span {
-    padding: 10px;
-}
-
-h2 {
-    padding-left: 60px;
-}
-

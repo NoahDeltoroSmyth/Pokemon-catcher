@@ -7,7 +7,7 @@ const pokemonImg3 = document.getElementById('third-pokemon');
 const pokemonRadio1 = document.getElementById('first-pokemon-input');
 const pokemonRadio2 = document.getElementById('second-pokemon-input');
 const pokemonRadio3 = document.getElementById('third-pokemon-input');
-const button = document.getElementById('select-pokemon');
+const button = document.getElementById('button-select');
 
 const generatePokemon = () => {
     let randomPokedex1 = Math.floor(Math.random() * pokemon.length);
